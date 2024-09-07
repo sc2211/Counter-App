@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="div">
+    <h1>COUNTER APP</h1>
+    <h2 class="count">0</h2>
+    <button class="btn1">+</button>
+    <button class="btn2">-</button>
+    <p>INCREMETN / DECREMENT:<input class="input" type='number' max="100" min="10"></p>
+    <button class="reset">RESET</button>
+  </div>
+
+  <script>
+    const count=document.querySelector(".count");
+    const btn1=document.querySelector(".btn1");
+    const btn2=document.querySelector(".btn2");
+    const input=document.querySelector(".input");
+    const reset=document.querySelector(".reset");
+
+    btn1.addEventListener("click",()=>{
+      const inputvalue=parseInt(input.value);
+      const countvalue=parseInt(count.innerText);
+      count.innerText=countvalue+inputvalue;
+      
+    })
+
+  
+    btn2.addEventListener("click",()=>{
+      const inputvalue=parseInt(input.value);
+      const countvalue=parseInt(count.innerText);
+      count.innerText=countvalue-inputvalue;
+      
+    })
+
+    reset.addEventListener("click",()=>{
+     count.innerText=0;
+    })
+    
+  </script>
+</body>
+</html>
